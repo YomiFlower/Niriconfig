@@ -1,0 +1,61 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;								Windows Section's								  ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(defwindow dashboard
+    :monitor 0
+    :geometry (geometry :x "0"
+                        :y "0"
+                        :anchor "center right")
+    :windowtype "dock"
+    :wm-ignore true
+(dashboard))
+
+(defvar revealdash false)
+(defvar var 0)
+
+(defwindow scroller
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x 0 :y 0 :width "800px" :height "5px" :anchor "bottom center")
+  :reserve (struts :distance "10px" :side "bottom")
+  :exclusive false
+  (scroller))
+
+
+(defwindow dock 
+  :geometry (geometry
+              :x 1000
+              :y 0
+              :width 1
+              :height 56
+              :anchor "right center")
+  :stacking "overlay"
+  :monitor 0
+  (revealdash))
+
+(defwindow opener
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x 0 :y 0 :width "10px" :height "500px" :anchor "center")
+  :exclusive false
+  (dididoit)
+)
+(defvar revealbar 1)
+(defvar bshover false)
+
+(defwindow barslide
+  :geometry (geometry 
+              :x "0%"
+              :y 0
+              :width 300
+              :height 20
+              :anchor "top center")
+              
+  :stacking "bottom"
+  :exclusive false
+  :monitor 0
+  :wm-ignore false
+  (barslidy)
+  )

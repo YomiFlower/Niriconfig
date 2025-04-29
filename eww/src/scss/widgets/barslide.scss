@@ -1,0 +1,25 @@
+barslide {
+  background-color: transparent;
+  trough {
+    min-width: 300px;
+    min-height: 20px;
+    background-color: transparent;
+    slider {
+      background-color: transparent;
+      min-width: 300px;
+      min-height: 0px;
+      margin: -100px 0;
+    }
+  }
+}
+.fakehandle {
+  transition: 500ms;
+  border-radius: $round;
+  min-width: 200px;
+  min-height: 5px;
+  margin: 10;
+  background-color: transparent;
+  &.active {
+    background-color: $white0;
+  }
+}
